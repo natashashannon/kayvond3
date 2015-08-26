@@ -10,23 +10,13 @@ d3.select("body")
     .range([0, 420]);
 
 
-// simple bar chart http://bost.ocks.org/mike/bar/
+// simple bar chart http://bost.ocks.org/mike/bar/2/
 d3.select(".chart")
   .selectAll("div")
     .data(data)
   .enter().append("div")
     .style("width", function(d) { return x(d) + "px"; })
     .text(function(d) { return d; });
-
-// simple bar chart spelled out step by step
-// var chart = d3.select(".chart");
-// var bar = chart.selectAll("div");
-// var barUpdate = bar.data(data);
-// var barEnter = barUpdate.enter().append("div");
-// barEnter.style("width", function(d) { return d * 10 + "px"; });
-// barEnter.text(function(d) { return d; });
-
-
 
 
 }
